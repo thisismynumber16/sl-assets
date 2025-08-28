@@ -1,0 +1,32 @@
+/*
+Sidebar
+*/
+
+@media (min-width: 1024px) {
+    .site-content.row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+  
+    /* Primary and sidebar side by side */
+    #primary.content-area.with-sidebar-right {
+      flex: 0 0 70%;
+      max-width: 70%;
+    }
+  
+    #sidebar.widget-area.with-sidebar-right {
+      flex: 0 0 30%;
+      max-width: 30%;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 20px; /* Adjust as needed */
+    }
+  
+    /* Article takes full width below primary and sidebar */
+    .site-content.row > article.content-area.with-sidebar-right {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-top: 20px; /* Optional spacing */
+    }
+  }
