@@ -29,17 +29,9 @@ function copyCurrentURLToClipboard() {
     // Remove the input from the DOM
     document.body.removeChild(tempInput);
 
-    // Update button to show feedback
-    if (event && event.target) {
-        var button = event.target.closest('button');
-        if (button) {
-            var originalText = button.innerHTML;
-            button.innerHTML = '<i class="fa fa-check"></i> Copied!';
-            setTimeout(function() {
-                button.innerHTML = originalText;
-            }, 2000);
-        }
-    }
+    // Show alert with the copied URL
+    var copiedURL = tempInput.value;
+    alert("URL copied to clipboard successfully!\n\n" + copiedURL);
 }
 
 // Check if Google Ads Loaded by using URL as Bait
