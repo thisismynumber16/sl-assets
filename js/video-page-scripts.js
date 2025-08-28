@@ -11,22 +11,34 @@ function copyCurrentURLToClipboard() {
 
         // Set the input value to the decoded URL
         tempInput.value = decodedURL;
+    } else {
+        // Fallback to current URL if encodedCurrentURL is not defined
+        tempInput.value = window.location.href;
+    }
 
-        // Append the input to the body (not visible)
-        document.body.appendChild(tempInput);
+    // Append the input to the body (not visible)
+    document.body.appendChild(tempInput);
 
-        // Select the input value
-        tempInput.select();
-        tempInput.setSelectionRange(0, 99999); // For mobile devices
+    // Select the input value
+    tempInput.select();
+    tempInput.setSelectionRange(0, 99999); // For mobile devices
 
-        // Copy the value to the clipboard
-        document.execCommand("copy");
+    // Copy the value to the clipboard
+    document.execCommand("copy");
 
-        // Remove the input from the DOM
-        document.body.removeChild(tempInput);
+    // Remove the input from the DOM
+    document.body.removeChild(tempInput);
 
-        // Notify the user that the URL was copied
-        alert("URL copied to clipboard: " + decodedURL);
+    // Update button to show feedback
+    if (event && event.target) {
+        var button = event.target.closest('button');
+        if (button) {
+            var originalText = button.innerHTML;
+            button.innerHTML = '<i class="fa fa-check"></i> Copied!';
+            setTimeout(function() {
+                button.innerHTML = originalText;
+            }, 2000);
+        }
     }
 }
 
@@ -67,6 +79,28 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+
+    // Handle back-to-top button
+    var backToTopButton = document.getElementById('back-to-top');
+    if (backToTopButton) {
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 100) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+        
+        // Smooth scroll to top
+        backToTopButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 
     detectAdBlock();
 });
