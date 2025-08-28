@@ -1,0 +1,141 @@
+#page {
+  max-width: 1300px;
+  margin: 10px auto;
+  background: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.more-videos-1 {
+  float: right;
+  top: 7px;
+  right: 7px;
+}
+
+.label-1 {
+  font-size: 0.8em;
+  padding: 0.2em 0.4em;
+}
+
+.post-thumbnail {
+  padding-bottom: 56.25%;
+}
+
+.post-thumbnail .wpst-trailer,
+.post-thumbnail img {
+  object-fit: fill;
+}
+
+.video-debounce-bar {
+  background: #e54b92 !important;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Arial);
+
+body.custom-background {
+  background-image: url("https://{$domain}/wp-content/themes/retrotube/assets/img/niches/filf/bg.jpg");
+  background-color: #181818 !important;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+#site-navigation {
+  background: #222222;
+}
+
+.site-title a {
+  font-family: Arial;
+  font-size: 36px;
+}
+
+.site-branding .logo img {
+  max-width: 170px;
+  max-height: 120px;
+  margin-top: 0px;
+  margin-left: 10px;
+}
+
+a,
+.site-title a i,
+.thumb-block:hover .rating-bar i,
+.categories-list .thumb-block:hover .entry-header .cat-title:before,
+.required,
+.like #more:hover i,
+.dislike #less:hover i,
+.top-bar i:hover,
+.main-navigation .menu-item-has-children > a:after,
+.menu-toggle i,
+.main-navigation.toggled li:hover > a,
+.main-navigation.toggled li.focus > a,
+.main-navigation.toggled li.current_page_item > a,
+.main-navigation.toggled li.current-menu-item > a,
+#filters .filters-select:after,
+.morelink i,
+.top-bar .membership a i,
+.thumb-block:hover .photos-count i {
+  color: #e54b92;
+}
+
+button,
+.button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.label,
+.pagination ul li a.current,
+.pagination ul li a:hover,
+body #filters .label.secondary.active,
+.label.secondary:hover,
+.main-navigation li:hover > a,
+.main-navigation li.focus > a,
+.main-navigation li.current_page_item > a,
+.main-navigation li.current-menu-item > a,
+.widget_categories ul li a:hover,
+.comment-reply-link,
+a.tag-cloud-link:hover,
+.template-actors li a:hover {
+  border-color: #e54b92 !important;
+  background-color: #e54b92 !important;
+}
+
+.rating-bar-meter,
+.vjs-play-progress,
+#filters .filters-options span:hover,
+.bx-wrapper .bx-controls-direction a,
+.top-bar .social-share a:hover,
+.thumb-block:hover span.hd-video,
+.featured-carousel .slide a:hover span.hd-video,
+.appContainer .ctaButton {
+  background-color: #e54b92 !important;
+}
+
+#video-tabs button.tab-link.active,
+.title-block,
+.widget-title,
+.page-title,
+.page .entry-title,
+.comments-title,
+.comment-reply-title,
+.morelink:hover {
+  border-color: #e54b92 !important;
+}
+
+/* Small desktops ----------- */
+@media only screen and (min-width: 64.001em) and (max-width: 84em) {
+  #main .thumb-block {
+    width: 25% !important;
+  }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 84.001em) {
+  #main .thumb-block {
+    width: 25% !important;
+  }
+}
