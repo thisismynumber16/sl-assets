@@ -13,13 +13,32 @@
     └── video-page-scripts.js   # Video page specific scripts
 ```
 
-## CDN URLs
+## CDN URLs (jsDelivr)
 
-All files are served via GitHub's raw content CDN:
+All files are served via jsDelivr CDN for proper MIME types:
 
-- Base URL: `https://raw.githubusercontent.com/thisismynumber16/sl-assets/main/`
-- CSS: `https://raw.githubusercontent.com/thisismynumber16/sl-assets/main/css/[filename].css`
-- JS: `https://raw.githubusercontent.com/thisismynumber16/sl-assets/main/js/[filename].js`
+- Base URL: `https://cdn.jsdelivr.net/gh/thisismynumber16/sl-assets@main/`
+- CSS: `https://cdn.jsdelivr.net/gh/thisismynumber16/sl-assets@main/css/[filename].css`
+- JS: `https://cdn.jsdelivr.net/gh/thisismynumber16/sl-assets@main/js/[filename].js`
+
+## Cache Purge URLs
+
+To force jsDelivr to refresh cached files, use these purge URLs:
+
+### CSS Files
+- [Purge earn-styles.css](https://purge.jsdelivr.net/gh/thisismynumber16/sl-assets@main/css/earn-styles.css)
+- [Purge dedicated-styles.css](https://purge.jsdelivr.net/gh/thisismynumber16/sl-assets@main/css/dedicated-styles.css)
+- [Purge video-page-default.css](https://purge.jsdelivr.net/gh/thisismynumber16/sl-assets@main/css/video-page-default.css)
+- [Purge video-page-sngtd.css](https://purge.jsdelivr.net/gh/thisismynumber16/sl-assets@main/css/video-page-sngtd.css)
+- [Purge video-page-layout.css](https://purge.jsdelivr.net/gh/thisismynumber16/sl-assets@main/css/video-page-layout.css)
+
+### JS Files
+- [Purge earn-original.js](https://purge.jsdelivr.net/gh/thisismynumber16/sl-assets@main/js/earn-original.js)
+- [Purge earn-obfuscated.js](https://purge.jsdelivr.net/gh/thisismynumber16/sl-assets@main/js/earn-obfuscated.js)
+- [Purge element-removal.js](https://purge.jsdelivr.net/gh/thisismynumber16/sl-assets@main/js/element-removal.js)
+- [Purge video-page-scripts.js](https://purge.jsdelivr.net/gh/thisismynumber16/sl-assets@main/js/video-page-scripts.js)
+
+**Note:** After purging, the CDN will fetch the latest version from GitHub. Cache purge may take a few minutes to propagate globally.
 
 ## Features
 
