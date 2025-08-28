@@ -4,7 +4,6 @@
 
 ```
 ├── css/
-│   ├── dedicated-styles.css    # Sidebar and layout styles
 │   └── earn-styles.css         # All earn page styles
 └── js/
     ├── earn-original.js        # Original unobfuscated JavaScript
@@ -27,7 +26,6 @@ To force jsDelivr to refresh cached files, use these purge URLs:
 
 ### CSS Files
 - [Purge earn-styles.css](https://purge.jsdelivr.net/gh/thisismynumber16/sl-assets@main/css/earn-styles.css)
-- [Purge dedicated-styles.css](https://purge.jsdelivr.net/gh/thisismynumber16/sl-assets@main/css/dedicated-styles.css)
 - [Purge video-page-default.css](https://purge.jsdelivr.net/gh/thisismynumber16/sl-assets@main/css/video-page-default.css)
 - [Purge video-page-sngtd.css](https://purge.jsdelivr.net/gh/thisismynumber16/sl-assets@main/css/video-page-sngtd.css)
 - [Purge video-page-layout.css](https://purge.jsdelivr.net/gh/thisismynumber16/sl-assets@main/css/video-page-layout.css)
