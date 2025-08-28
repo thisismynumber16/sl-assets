@@ -1,3 +1,4 @@
+/* Adblocker popup styles */
 .popup-adblocker-wrap{
     z-index:9999999999;
     width:100%;
@@ -60,186 +61,7 @@
     cursor:pointer
 }
 
-#pp-div{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none;
-    z-index: 9999999;
-}
-
-#pp-content{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 2%;
-    text-align: center;
-    z-index: 999;
-    width: 80%; /* responsive width */
-    max-width: 600px; /* limit max width, if necessary */
-}
-
-#ads-container{
-    max-height: 70vh; /* Adjust this value according to your needs */
-    overflow-y: auto;
-    width: 100%; /* full width inside the container */
-}
-
-#close-button{
-    padding: 1em;
-    background-color: red;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 2%; /* Add some top margin for spacing */
-}
-
-/* Media query for smaller screens */
-@media (max-width: 480px) {
-    #pp-content {
-        width: 95%; /* use more width on small screens */
-    }
-}
-
-.pricing-card-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh;
-    font-family: 'Open Sans', sans-serif;
-}
-
-.pricing-card-container a {
-    text-decoration: none;
-    color: inherit; /* This is to ensure that the color of text doesn't change to the default link color */
-}
-
-.pricing-card-wrapper {
-    position: relative;
-    margin-top: 30px;
-}
-
-.pricing-card-wrapper::before {
-        content: 'REMOVE ADS';
-    position: absolute;
-    top: -40px;
-    left: calc(14%); /* Adjusting position relative to .pricing-card */
-    transform: translateX(-50%);
-    display: block;
-    width: 60%; /* This might need to be adjusted */
-    background: #c8252c;
-    color: #fff;
-    font-weight: 700;
-    padding: 10px 0;
-    text-align: center;
-    border-radius: 10px 10px 0 0;
-    border: 3px solid transparent;
-    box-shadow: 0px 0px 0px 3px #c8252c; /* initial border color */
-    animation: pulse 1s infinite;
-}
-
-.pricing-card {
-    position: relative;
-    width: 90%;
-    max-width: 400px;
-    background-color: #ffffff;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 15px;
-    overflow: hidden;
-    text-align: center;
-    padding: 20px;
-    transition: transform 0.3s;
-}
-
-.pricing-card:hover {
-    transform: scale(1.05);
-}
-
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        box-shadow: 0px 0px 0px 3px #c8252c; /* initial border color */
-    }
-    70% {
-        transform: scale(1.05);
-        box-shadow: 0px 0px 0px 6px red, /* simulate thicker border */
-                      0px 0px 0px 10px #ff6b6b; /* gradient effect */
-    }
-    100% {
-        transform: scale(1);
-        box-shadow: 0px 0px 0px 3px #c8252c; /* initial border color */
-    }
-}
-
-
-
-
-.discount-banner {
-    position: absolute;
-    left: -30px;
-    top: 13px;
-    padding: 10px 35px;
-    color: #ffffff;
-    background-color: #c8252c;
-    font-weight: bold;
-    font-size: 0.8rem;
-    transform: rotate(-45deg);
-}
-
-.pricing-header {
-    margin: 20px 0;
-}
-
-.original-price, .discounted-price {
-    margin: 0;
-}
-
-.original-price {
-    color: #bfbfbf;
-    text-decoration: line-through;
-    font-size: 1.4em;
-}
-
-.discounted-price {
-    color: #c8252c;
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
-.pricing-details {
-    list-style: none;
-    padding: 0;
-    color: #757575;
-}
-
-.pricing-details li {
-    margin: 10px 0;
-    font-weight: 700;
-}
-
-.upgrade-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 20px;
-    color: #ffffff;
-    background-color: #c8252c;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-    font-weight: 700;
-}
-
-.upgrade-button:hover {
-    background-color: red;
-}
-
+/* Banner styles (used in templates) */
 .banner {
   display: block;
   background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
@@ -290,36 +112,7 @@
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-
-
-
-
-
-
-
-
-body { font-family: Arial, sans-serif;}
-p { font-size: 1em; line-height: 1.5em;}
-section { background-color: #f8f9fa; padding: 1em; margin-bottom: 1em; }
-
-
-
-/* UTILITIES */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-}
-
-li {
-  list-style: none;
-}
-
-/* NAVBAR STYLING STARTS */
+/* Navbar styles (used in download and shortener pages) */
 .navbar {
   display: flex;
   align-items: center;
@@ -333,13 +126,11 @@ li {
   color: #fff;
 }
 
-/* LOGO */
 .logo img {
   font-size: 32px;
   max-width: 4em;
 }
 
-/* NAVBAR MENU */
 .menu {
   display: flex;
   gap: 1em;
@@ -354,26 +145,23 @@ li {
 
 .menu li {
   padding: 5px 14px;
+  list-style: none;
 }
 
-/* RESPONSIVE NAVBAR MENU STARTS */
-
-/* CHECKBOX HACK */
-
+/* Hamburger menu for mobile */
 input[type=checkbox] {
   display: none;
 } 
 
-/* HAMBURGER MENU */
 .hamburger {
   display: none;
   font-size: 24px;
   user-select: none;
 }
 
-/* APPLYING MEDIA QUERIES */
+/* Mobile responsive navbar */
 @media (max-width: 768px) {
- .menu {
+  .menu {
     display:none;
     position: absolute;
     background: radial-gradient(at 50% -20%,#0070A1,#16113B) fixed;
@@ -401,36 +189,9 @@ input[type=checkbox] {
   .hamburger {
     display: block;
   }
-
-  .dropdown {
-    left: 50%;
-    top: 30px;
-    transform: translateX(35%);
-  }
-
-  .dropdown li:hover {
-    background-color: #2cc4f4;
-  }
 }
 
-
-.circle.text {
-  line-height: 50px;
-}
-
-.circle {
-  margin: 10px;
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  background-color: #9ff;
-  color: #4d4dff;
-  font-size: 25px;
-  overflow: hidden;
-}
-
-
-
+/* Download section styles (used in download page) */
 .download-section {
   display: flex;
   flex-direction: column;
@@ -497,197 +258,35 @@ input[type=checkbox] {
   background-color: #414b56;
 }
 
-.free-download-btn {
-  background-color: #007bff;
-  pointer-events: none;
-  opacity: 0.5;
-}
-
-.free-download-btn:hover {
-  background-color: #0069d9;
-}
-
-.fast-download-btn {
-  background-color: #6c757d;
-}
-
-.fast-download-btn:hover {
-  background-color: #5a6268;
-}
-
-/* Responsiveness */
+/* Responsive download section */
 @media (max-width: 600px) {
   .download-section {
-      padding: 10px;
+    padding: 10px;
   }
   .circle {
-      width: 70px;
-      height: 70px;
-      font-size: 18px;
+    width: 70px;
+    height: 70px;
+    font-size: 18px;
   }
   .download-btn {
-      padding: 10px 20px;
-      font-size: 16px;
-      width: 150px;
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 150px;
   }
   .download-btn i {
-      font-size: 16px;
-      margin-right: 5px;
+    font-size: 16px;
+    margin-right: 5px;
   }
 }
 
-
-.article {
-  background: #FFF;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
-  margin: 20px 0;
-  color: black;
-}
-
+/* Container */
 .container {
   width: 80%;
   text-align: center;
   margin: auto;
 }
 
-
-
-.file-card {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  width: 300px;
-}
-
-.file-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.file-title {
-  font-size: 1em;
-  font-weight: 600;
-  color: #333;
-}
-
-.file-detail {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.file-info {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  color: #888;
-}
-
-.size-label {
-  text-transform: uppercase;
-}
-
-.size-value {
-  font-weight: 600;
-  color: #333;
-}
-
-
-
-
-
-
-
-
-
-
-.footer {
-  background-color: #343a40;
-  padding: 40px 0;
-  color: #fff;
-  text-align: center;
-  font-family: Arial, sans-serif;
-}
-
-.footer .container {
-  max-width: 980px;
-  margin: auto;
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer-links ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-  margin-bottom: 30px;
-}
-
-.footer-links ul li {
-  margin: 0 15px;
-}
-
-.footer-links ul li a {
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 14px;
-  transition: color 0.3s;
-}
-
-.footer-links ul li a:hover {
-  color: #ccc;
-}
-
-.legal a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.legal a:hover {
-  color: #ccc;
-}
-
-.legal p {
-  font-size: 12px;
-  line-height: 1.5;
-}
-
-/* Responsive styling */
-@media (max-width: 767px) {
-  .footer-links ul {
-      flex-direction: column;
-      align-items: center;
-  }
-
-  .footer-links ul li {
-      margin-bottom: 15px;
-  }
-
-  .footer-links ul li:last-child {
-      margin-bottom: 0;
-  }
-}
-
-
-/* Bottom Countdown Button Styles */
+/* Bottom countdown styles (used in templates) */
 .bottom-countdown-content {
   display: flex;
   align-items: center;
@@ -711,4 +310,99 @@ input[type=checkbox] {
   margin: 0;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   text-align: center;
+}
+
+/* Pricing card styles (used in premium templates) */
+.pricing-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.pricing-card-container a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.pricing-card-wrapper {
+  position: relative;
+  margin-top: 30px;
+}
+
+.pricing-card {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.pricing-card:hover {
+  transform: scale(1.05);
+}
+
+.discount-banner {
+  position: absolute;
+  left: -30px;
+  top: 13px;
+  padding: 10px 35px;
+  color: #ffffff;
+  background-color: #c8252c;
+  font-weight: bold;
+  font-size: 0.8rem;
+  transform: rotate(-45deg);
+}
+
+.pricing-header {
+  margin: 20px 0;
+}
+
+.original-price, .discounted-price {
+  margin: 0;
+}
+
+.original-price {
+  color: #bfbfbf;
+  text-decoration: line-through;
+  font-size: 1.4em;
+}
+
+.discounted-price {
+  color: #c8252c;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.pricing-details {
+  list-style: none;
+  padding: 0;
+  color: #757575;
+}
+
+.pricing-details li {
+  margin: 10px 0;
+  font-weight: 700;
+}
+
+.upgrade-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  color: #ffffff;
+  background-color: #c8252c;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-weight: 700;
+}
+
+.upgrade-button:hover {
+  background-color: red;
 }
