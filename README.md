@@ -2,16 +2,6 @@
 
 ## Assets Structure
 
-```
-├── css/
-│   └── earn-styles.css         # All earn page styles
-└── js/
-    ├── earn-original.js        # Original unobfuscated JavaScript
-    ├── earn-obfuscated.js      # Production obfuscated version
-    ├── element-removal.js      # Dynamic element removal utility
-    └── video-page-scripts.js   # Video page specific scripts
-```
-
 ## CDN URLs (jsDelivr)
 
 All files are served via jsDelivr CDN for proper MIME types:
@@ -29,6 +19,7 @@ To force jsDelivr to refresh cached files, use these purge URLs:
 - [Purge video-page-default.css](https://purge.jsdelivr.net/gh/thisismynumber16/sl-assets@main/css/video-page-default.css)
 - [Purge video-page-sngtd.css](https://purge.jsdelivr.net/gh/thisismynumber16/sl-assets@main/css/video-page-sngtd.css)
 - [Purge video-page-layout.css](https://purge.jsdelivr.net/gh/thisismynumber16/sl-assets@main/css/video-page-layout.css)
+- [Purge adblocker-display.css](https://purge.jsdelivr.net/gh/thisismynumber16/sl-assets@main/css/adblocker-display.css)
 
 ### JS Files
 - [Purge earn-original.js](https://purge.jsdelivr.net/gh/thisismynumber16/sl-assets@main/js/earn-original.js)
