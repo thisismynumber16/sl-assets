@@ -104,6 +104,24 @@
     color: #fff !important;
 }
 
+/* Inline display mode styles */
+#adblocker:not(.popup-adblocker-wrap) {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 30px 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure text is legible in inline mode */
+#adblocker:not(.popup-adblocker-wrap) .bclass-adblocker {
+    color: #1a1a1a !important;
+}
+
+#adblocker:not(.popup-adblocker-wrap) .aclass-adblocker {
+    color: #666 !important;
+}
+
 /* Force display when adblock is detected */
 #adblocker.show {
     display: block !important;
