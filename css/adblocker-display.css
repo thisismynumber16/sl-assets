@@ -104,22 +104,39 @@
     color: #fff !important;
 }
 
-/* Inline display mode styles */
-#adblocker:not(.popup-adblocker-wrap) {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 30px 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+/* Inline display mode - card-like container */
+#adblocker {
+    background: #ffffff !important;
+    border: 2px solid #e0e0e0 !important;
+    border-radius: 12px !important;
+    padding: 35px 25px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    margin-bottom: 25px !important;
 }
 
-/* Ensure text is legible in inline mode */
-#adblocker:not(.popup-adblocker-wrap) .bclass-adblocker {
+/* Reset styles for popup mode */
+#adblocker.popup-adblocker-wrap {
+    background: rgba(0, 0, 0, 0.85) !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    margin-bottom: 0 !important;
+}
+
+/* Ensure text is always legible in inline mode */
+#adblocker .bclass-adblocker {
     color: #1a1a1a !important;
+    font-size: 26px !important;
+    margin-bottom: 18px !important;
+    font-weight: 700 !important;
 }
 
-#adblocker:not(.popup-adblocker-wrap) .aclass-adblocker {
-    color: #666 !important;
+#adblocker .aclass-adblocker {
+    color: #555555 !important;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 25px !important;
 }
 
 /* Force display when adblock is detected */
