@@ -262,7 +262,12 @@ Sidebar
 }
 
 body { font-family: Arial, sans-serif;}
-p { font-size: 1em; line-height: 1.5em;}
+p {
+    font-size: 1em;
+    line-height: 1.5em;
+    /* Add margin bottom to paragraph so when we hide it, it still shows spacing good for minimal hiding */
+    margin-bottom: 1em;
+}
 
 /* UTILITIES */
 * {
