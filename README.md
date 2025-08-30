@@ -26,6 +26,7 @@ To force jsDelivr to refresh cached files, use these purge URLs:
 - [Purge earn-obfuscated.js](https://purge.jsdelivr.net/gh/thisismynumber16/sl-assets@main/js/earn-obfuscated.js)
 - [Purge element-removal.js](https://purge.jsdelivr.net/gh/thisismynumber16/sl-assets@main/js/element-removal.js)
 - [Purge video-page-scripts.js](https://purge.jsdelivr.net/gh/thisismynumber16/sl-assets@main/js/video-page-scripts.js)
+- [Purge referrer-masking.js](https://purge.jsdelivr.net/gh/thisismynumber16/sl-assets@main/js/referrer-masking.js)
 
 **Note:** After purging, the CDN will fetch the latest version from GitHub. Cache purge may take a few minutes to propagate globally.
 
