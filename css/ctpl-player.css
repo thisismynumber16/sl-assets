@@ -1,0 +1,371 @@
+.wps-player__happy-inside-btn-close {
+  background-color: #5835ff;
+  color: #fff;
+}
+
+.wps-player__happy-inside-btn-close {
+  border-color: #5835ff !important;
+  color: #fff;
+}
+
+.fluid_initial_play:hover {
+  -webkit-box-shadow: 0px 0px 40px 5px #5835ff;
+  -moz-box-shadow: 0px 0px 40px 5px #5835ff;
+  box-shadow: 0px 0px 40px 5px #5835ff;
+}
+
+@keyframes lds-double-ring {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes lds-double-ring {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes lds-double-ring_reverse {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+@-webkit-keyframes lds-double-ring_reverse {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+.lds-double-ring {
+  position: relative;
+}
+.lds-double-ring div {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 10px;
+  left: 10px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  border-color: #5835ff transparent #5835ff transparent;
+  -webkit-animation: lds-double-ring 1.3s linear infinite;
+  animation: lds-double-ring 1.3s linear infinite;
+}
+
+.lds-double-ring div:nth-child(2) {
+  width: 70px;
+  height: 70px;
+  top: 15px;
+  left: 15px;
+  border-color: transparent #ffffff transparent #ffffff;
+  -webkit-animation: lds-double-ring_reverse 1.3s linear infinite;
+  animation: lds-double-ring_reverse 1.3s linear infinite;
+}
+.lds-double-ring {
+  width: 100px !important;
+  height: 100px !important;
+  -webkit-transform: translate(-50px, -50px) scale(1) translate(50px, 50px);
+  transform: translate(-50px, -50px) scale(1) translate(50px, 50px);
+}
+
+body {
+  color: white;
+  background: #000;
+  position: absolute;
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+.wps-iframe-loader {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  z-index: 5;
+}
+
+.wps-iframe-loader--inner-block {
+  position: absolute;
+  top: calc(50% - 60px);
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  color: #777;
+}
+
+.vast_video_loading {
+  position: absolute;
+}
+
+/******************/
+/***** Player *****/
+/******************/
+
+.wps-player-block {
+  position: relative;
+  z-index: 10;
+}
+
+.wps-player .ima-ad-container {
+  top: 0;
+}
+
+.wps-player__logo-watermark {
+  position: absolute;
+}
+
+.wps-player__logo-watermark--grayscale {
+  -webkit-filter: saturate(0);
+  filter: saturate(0);
+}
+
+.wps-player__logo-watermark--top-left {
+  top: 1em;
+  left: 1em;
+}
+.wps-player__logo-watermark--top-right {
+  top: 1em;
+  right: 1em;
+}
+.wps-player__logo-watermark--bottom-left {
+  bottom: 3em;
+  left: 2em;
+}
+.wps-player__logo-watermark--bottom-right {
+  bottom: 3em;
+  right: 2em;
+}
+
+.wps-player__happy-inside {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.wps-player__happy-inside-zone {
+  display: flex;
+  line-height: 0;
+}
+
+/**************************************************/
+/***** Reset default theme css in happy zones *****/
+/**************************************************/
+.wps-player__happy-inside a,
+.wps-player__happy-inside iframe,
+.wps-player__happy-inside img {
+  display: block !important;
+  line-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.wps-player__happy-inside iframe,
+.wps-player__happy-inside img {
+  height: 250px !important;
+  max-width: 300px !important;
+  position: inherit !important;
+}
+
+.wps-player__happy-inside-btn-close {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  margin-top: 10px;
+  padding: 0 20px;
+  height: 40px;
+  line-height: 40px;
+  font-weight: normal;
+}
+
+.wps-player__happy-under {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 576px) {
+  .wps-player__happy-inside {
+    display: none !important;
+  }
+}
+
+/*************************/
+/****** FLUIDPLAYER ******/
+/*************************/
+.fluid_video_wrapper {
+  height: auto !important;
+}
+
+.fluid_video_wrapper.fluid_player_layout_default .fade_out {
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease 0s;
+  -webkit-transition: all 0.2s ease 0s;
+  -moz-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease 0s;
+  -ms-transition: all 0.2s ease 0s;
+}
+
+.fluid_video_wrapper.fluid_player_layout_default
+  .fluid_controls_container
+  .fluid_controls_progress_container
+  .fluid_controls_progress,
+.fluid_video_wrapper.fluid_player_layout_default
+  .fluid_controls_container
+  .fluid_controls_progress_container
+  .fluid_controls_progress
+  .fluid_controls_currentprogress {
+  height: 8px;
+  /* background-color: #333; */
+  transition: all 0.2s ease 0s;
+  -webkit-transition: all 0.2s ease 0s;
+  -moz-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease 0s;
+  -ms-transition: all 0.2s ease 0s;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.fluid_video_wrapper.fluid_player_layout_default
+  .fluid_controls_container
+  .fluid_controls_ad_markers_holder {
+  height: 8px;
+}
+
+.fluid_video_wrapper.fluid_player_layout_default
+  .fluid_controls_container
+  .fluid_controls_progress_container
+  .fluid_controls_buffered {
+  background: rgba(115, 133, 159, 0.3);
+  height: 8px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.fluid_video_wrapper.fluid_player_layout_default
+  .fluid_controls_container
+  .fluid_controls_progress_container:hover
+  .fluid_controls_progress,
+.fluid_video_wrapper.fluid_player_layout_default
+  .fluid_controls_container
+  .fluid_controls_progress_container:hover
+  .fluid_controls_buffered,
+.fluid_video_wrapper.fluid_player_layout_default
+  .fluid_controls_container
+  .fluid_controls_progress_container:hover
+  .fluid_controls_ad_markers_holder {
+  height: 8px;
+  margin-top: 0;
+}
+
+.fluid_video_wrapper.fluid_player_layout_default
+  .fluid_controls_container
+  .fluid_controls_progress_container:hover
+  .fluid_controls_progress
+  .fluid_controls_currentprogress {
+  height: 8px;
+}
+
+.fluid_video_wrapper.fluid_player_layout_default
+  .fluid_controls_container
+  .fluid_controls_progress_container
+  .fluid_controls_progress
+  .fluid_controls_currentpos {
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  top: -3px;
+  border-radius: 8px;
+}
+
+.fluid_video_wrapper.fluid_player_layout_default
+  .fluid_controls_container
+  .fluid_controls_left,
+.fluid_video_wrapper.fluid_player_layout_default
+  .fluid_controls_container
+  .fluid_controls_right {
+  top: 29px;
+  transition: all 0.2s ease 0s;
+  -webkit-transition: all 0.2s ease 0s;
+  -moz-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease 0s;
+  -ms-transition: all 0.2s ease 0s;
+}
+
+.fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container {
+  height: 60px;
+  transition: all 0.2s ease 0s;
+  -webkit-transition: all 0.2s ease 0s;
+  -moz-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease 0s;
+  -ms-transition: all 0.2s ease 0s;
+}
+
+.fluid_initial_play,
+.fluid_initial_pause {
+  width: 100px;
+  height: 100px;
+}
+
+.fluid_initial_play_button {
+  border: none;
+  background-image: url(../img/wps-play-icon.svg);
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  margin: 0;
+}
+
+.fluid_initial_pause_button {
+  width: 8px;
+  height: 30px;
+  border: 9px solid #fff;
+  border-top: 0;
+  border-bottom: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+
+.fluid_video_wrapper:hover,
+.fluid_video_wrapper:focus {
+  cursor: inherit;
+}
