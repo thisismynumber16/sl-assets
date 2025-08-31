@@ -122,6 +122,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 doSearch();
             });
         }
+        if (input) {
+            input.addEventListener("keydown", function(e) {
+                if (e.key === "Enter") {
+                    e.preventDefault();
+                    doSearch();
+                }
+            });
+        }
     })();
 
     detectAdBlock();
