@@ -94,5 +94,35 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    
+    // Handle search form without exposing action URL
+    (function() {
+        var form = document.getElementById('searchform');
+        var input = document.getElementById('s');
+        var button = document.getElementById('searchsubmit');
+        var searchBase = (typeof SL_SEARCH_B64 === 'string' && SL_SEARCH_B64) ? atob(SL_SEARCH_B64) : null;
+
+        function doSearch() {
+            if (!input) return;
+            var q = (input.value || '').trim();
+            if (!q || q === 'Search...') return;
+            var base = searchBase || (window.location.origin + '/?s=');
+            window.location.href = base + encodeURIComponent(q);
+        }
+
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                doSearch();
+            });
+        }
+        if (button) {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                doSearch();
+            });
+        }
+    })();
+
     detectAdBlock();
 });
