@@ -17,8 +17,44 @@ jQuery(document).ready(function() {
         }
     });
 
+    // Generate thumbnail from video
     if (0 !== _$video.length) {
-        setupFluidPlayer(_videoId, _$video);
+        var video = _$video[0];
+        
+        // Set up thumbnail generation
+        video.addEventListener('loadeddata', function() {
+            // Jump to 50% of the video duration to get a better thumbnail
+            if (video.duration) {
+                video.currentTime = video.duration * 0.5;
+            }
+        });
+        
+        video.addEventListener('seeked', function() {
+            // Create canvas and capture frame as thumbnail
+            var canvas = document.createElement('canvas');
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            var ctx = canvas.getContext('2d');
+            ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+            
+            // Set the poster image
+            var dataUrl = canvas.toDataURL('image/jpeg', 0.8);
+            video.poster = dataUrl;
+            
+            // Reset video to beginning
+            video.currentTime = 0;
+            
+            // Now setup Fluid Player with the poster
+            setupFluidPlayer(_videoId, _$video);
+        }, { once: true });
+        
+        // Fallback: If video fails to generate thumbnail, still setup player
+        video.addEventListener('error', function() {
+            setupFluidPlayer(_videoId, _$video);
+        });
+        
+        // Load video metadata to trigger thumbnail generation
+        video.load();
     }
 
     /**
