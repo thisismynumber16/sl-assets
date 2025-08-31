@@ -1,4 +1,65 @@
 /*
+Force scrolling fixes for mobile - prevents ads from blocking scroll
+*/
+html, body {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    position: relative !important;
+    height: auto !important;
+    min-height: 100% !important;
+}
+
+/* Touch action for all elements to ensure scrolling */
+* {
+    touch-action: pan-y !important;
+}
+
+/* Main containers must allow scrolling */
+#page, .site-content, .content-area, main, article {
+    overflow: visible !important;
+    position: relative !important;
+    height: auto !important;
+}
+
+/* Fix ad containers that might block scrolling */
+.happy-header, .happy-footer, .happy-sidebar,
+[class*="ad-"], [class*="ads-"], [class*="advert"],
+[id*="ad-"], [id*="ads-"], [id*="advert"],
+div[id*="raptive"], div[class*="raptive"],
+div[id*="adthrive"], div[class*="adthrive"] {
+    pointer-events: auto !important;
+    z-index: auto !important;
+}
+
+/* Mobile-specific scroll fixes */
+@media (max-width: 768px) {
+    html, body {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* Override fixed/sticky positioning on mobile */
+    .happy-header, .happy-footer, .happy-sidebar,
+    [style*="position: fixed"], [style*="position:fixed"],
+    [style*="position: sticky"], [style*="position:sticky"] {
+        position: relative !important;
+    }
+    
+    /* Ensure minimum height for scrollable content */
+    #content, #primary, .site-main {
+        min-height: 100vh !important;
+        overflow-y: visible !important;
+    }
+    
+    /* Fix sidebar on mobile */
+    #sidebar.widget-area.with-sidebar-right {
+        position: relative !important;
+        top: auto !important;
+    }
+}
+
+/*
 Sidebar
 */
 

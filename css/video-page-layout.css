@@ -1,5 +1,70 @@
 /* Video Page Layout Styles - Common styles for video page */
 
+/* Force scrolling to always be enabled - fixes ad blocking issues */
+html, body {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important; /* Smooth scrolling on iOS */
+    position: relative !important;
+    height: auto !important;
+    min-height: 100% !important;
+}
+
+/* Prevent any element from blocking scrolling */
+* {
+    touch-action: pan-y !important; /* Allow vertical scrolling on touch devices */
+}
+
+/* Ensure main content container allows scrolling */
+#page, .site-content, .content-area, main {
+    overflow: visible !important;
+    position: relative !important;
+    height: auto !important;
+}
+
+/* Fix for floating/fixed ads that might block scrolling */
+.happy-header, .happy-footer, .happy-sidebar,
+[class*="ad-"], [class*="ads-"], [class*="advert"],
+[id*="ad-"], [id*="ads-"], [id*="advert"],
+iframe[src*="doubleclick"], iframe[src*="googlesyndication"],
+div[id*="raptive"], div[class*="raptive"],
+div[id*="adthrive"], div[class*="adthrive"] {
+    pointer-events: auto !important;
+    position: relative !important;
+    z-index: auto !important;
+}
+
+/* Ensure video iframes don't block scrolling */
+.video-player iframe, .wps-player iframe {
+    pointer-events: auto !important;
+    touch-action: auto !important;
+}
+
+/* Mobile-specific fixes */
+@media (max-width: 768px) {
+    html, body {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* Prevent fixed positioning from blocking scroll on mobile */
+    .happy-header, .happy-footer, .happy-sidebar {
+        position: relative !important;
+    }
+    
+    /* Fix for sticky/fixed ads on mobile */
+    [style*="position: fixed"], [style*="position:fixed"],
+    [style*="position: sticky"], [style*="position:sticky"] {
+        position: relative !important;
+    }
+    
+    /* Ensure content is scrollable even with overlays */
+    #content, #primary, .site-main {
+        min-height: 100vh !important;
+        overflow-y: visible !important;
+    }
+}
+
 /* Widget titles and headers */
 .widget-title-share {
     margin-top: 25px;
