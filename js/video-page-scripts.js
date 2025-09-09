@@ -133,4 +133,33 @@ document.addEventListener("DOMContentLoaded", function () {
     })();
 
     detectAdBlock();
+    
+    // WP nav init (hamburger menu) with fallback
+    (function($){
+        if (!$ || !$("#site-navigation").length) return;
+        var $nav = $("#site-navigation");
+        try {
+            if ($.fn && typeof $.fn.menumaker === "function") {
+                $nav.menumaker({ format: "multitoggle" });
+            }
+        } catch (e) {}
+
+        var $btn = $nav.find(".button-nav");
+        var $menu = $nav.find("> ul");
+        if ($btn.length && $menu.length) {
+            $btn.off("click.slFallback").on("click.slFallback", function(){
+                var open = $menu.hasClass("open");
+                $menu.toggleClass("open");
+                if (typeof $menu.slideToggle === "function") {
+                    $menu.stop(true, true).slideToggle();
+                } else {
+                    $menu.css("display", open ? "none" : "block");
+                }
+            });
+            var mediasize = 1000;
+            if ($(window).width() <= mediasize) {
+                $menu.css("display", "none").removeClass("open");
+            }
+        }
+    })(window.jQuery || null);
 });
