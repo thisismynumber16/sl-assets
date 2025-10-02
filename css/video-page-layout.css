@@ -10,9 +10,9 @@ html, body {
     min-height: 100% !important;
 }
 
-/* Prevent any element from blocking scrolling */
+/* Prevent any element from blocking scrolling while keeping native gestures */
 * {
-    touch-action: pan-y !important; /* Allow vertical scrolling on touch devices */
+    touch-action: auto !important; /* Let the browser handle pinch zoom and scrolling */
 }
 
 /* Ensure main content container allows scrolling */
